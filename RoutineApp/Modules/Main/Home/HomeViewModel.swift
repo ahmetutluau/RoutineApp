@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class HomeViewModel: ObservableObject {
+protocol HomeViewModelProtocol: ObservableObject {
+    var routines: [Routine] { get }
+}
+
+final class HomeViewModel: HomeViewModelProtocol {
     let routines: [Routine] = [
         Routine(image: "routine1",
                 title: "Detailed Morning Routine Tasks",

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var coordinator: Coordinator
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,7 +21,7 @@ struct HomeView: View {
                 Rectangle()
                     .frame(height: 2)
                     .foregroundColor(Color.init(hex: "#D0D0D0"))
-            }
+            }//: header view
             .padding(.horizontal, 20)
             
             List {
@@ -38,7 +38,7 @@ struct HomeView: View {
                             .foregroundStyle(Color.init(hex: "#000000"))
                         
                         Spacer()
-                    }
+                    }//: List row
                     .frame(height: 92)
                     .frame(maxWidth: .infinity)
 
@@ -51,13 +51,13 @@ struct HomeView: View {
                     }
                     .listRowSeparator(.hidden)
                 }
-            }
+            }//: List
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
-        }
+        }//: mainVstack
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }

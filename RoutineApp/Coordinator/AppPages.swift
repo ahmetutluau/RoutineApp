@@ -20,7 +20,7 @@ enum Sheet: Identifiable {
         }
     }
     
-    case addToList
+    case addToList(routineTasks: Set<RoutineTask>)
 }
 
 enum FullScreenCover: String, Identifiable {

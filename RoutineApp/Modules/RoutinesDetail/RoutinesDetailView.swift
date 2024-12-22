@@ -76,7 +76,7 @@ struct RoutinesDetailView: View {
         .overlay(alignment: .bottomTrailing) {
             if !viewModel.selectedTasks.isEmpty {
                 Button {
-                    
+                    coordinator.presentSheet(.addToList(routineTasks: viewModel.selectedTasks))
                 } label: {
                     HStack(alignment: .center, spacing: 10) {
                         Image(systemName: "plus")

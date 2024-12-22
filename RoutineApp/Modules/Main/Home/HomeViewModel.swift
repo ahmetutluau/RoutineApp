@@ -13,7 +13,7 @@ final class HomeViewModel: ObservableObject {
                 title: "Detailed Morning Routine Tasks",
                 subtitle: "Wake-Up and Hydration",
                 tasks: [
-                    RoutineTask(images: ["detail1", "detail2", "detail3"],
+                    RoutineTask(images: ["detail1", "detail2", "detail1"],
                                 description: "Drink a Glass of Water",
                                 subDescription: "Start with a full glass to rehydrate after sleep",
                                 category: "Hydration, Health"),

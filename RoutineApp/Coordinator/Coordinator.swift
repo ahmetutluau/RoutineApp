@@ -63,8 +63,8 @@ class Coordinator: ObservableObject {
     @ViewBuilder
     func buildSheet(sheet: Sheet) -> some View {
         switch sheet {
-        case .addToList:
-            EmptyView()
+        case .addToList(let routineTask):
+            MyListView(viewModel: MyListViewModel(routines: routineTask, manager: MyListManager.shared))
         }
     }
     

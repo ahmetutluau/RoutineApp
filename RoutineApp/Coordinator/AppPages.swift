@@ -9,7 +9,7 @@ import SwiftUI
 
 enum AppPages: Hashable {
     case home
-    case routineDetail
+    case routineDetail(routine: Routine)
 }
 
 enum Sheet: Identifiable {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
     
     var body: some View {
@@ -45,6 +46,9 @@ struct HomeView: View {
                         Color.blue.opacity(0.3)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .onTapGesture {
+                        coordinator.push(page: .routineDetail(routine: rutine))
+                    }
                     .listRowSeparator(.hidden)
                 }
             }

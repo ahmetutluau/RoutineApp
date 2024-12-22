@@ -54,8 +54,8 @@ class Coordinator: ObservableObject {
         case .home:
             MainTabBarView()
                 .navigationBarBackButtonHidden()
-        case .routineDetail:
-            EmptyView()
+        case .routineDetail(let routine):
+            RoutinesDetailView(viewModel: RoutinesDetailViewModel(routine: routine))
                 .navigationBarBackButtonHidden()
         }
     }
